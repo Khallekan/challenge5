@@ -1,0 +1,11 @@
+$color-1: hsl(217, 19%, 35%);
+$color-2: hsl(214, 17%, 51%);
+$color-3: hsl(212, 23%, 69%);
+$color-4: hsl(210, 46%, 95%);
+$font: 'Manrope', sans-serif;
+
+@mixin grid-template($row: 1fr, $column: 1fr) {
+    display: grid;
+    grid-template-rows: $row;
+    grid-template-columns: $column;
+}

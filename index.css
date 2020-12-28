@@ -1,0 +1,381 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap");
+*,
+*::before,
+*::after {
+  margin: 0;
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+  background-color: #ecf2f8;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: 1fr auto;
+      grid-template-rows: 1fr auto;
+  width: 100vw;
+  height: 100vh;
+}
+
+section.content {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+  grid-column: span 1;
+  width: 700px;
+  height: 250px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 100%;
+      grid-template-rows: 100%;
+  -ms-grid-columns: 40% 60%;
+      grid-template-columns: 40% 60%;
+  margin: auto;
+  background-color: #ecf2f8;
+}
+
+section.content div.drawer {
+  width: 100%;
+  background-image: url("./images/drawers.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  overflow: hidden;
+  border-top-left-radius: 5%;
+  border-bottom-left-radius: 5%;
+}
+
+section.content div.preview {
+  grid-row: span 1;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  padding: 2em;
+  border-top-right-radius: 5%;
+  border-bottom-right-radius: 5%;
+}
+
+div.preview {
+  background-color: snow;
+}
+
+div.preview p.futoi {
+  width: 90%;
+  font-weight: 700;
+  font-size: large;
+}
+
+div.preview p.hosoi {
+  width: 90%;
+  margin-top: 10px;
+  font-size: small;
+}
+
+div.info {
+  margin-top: auto;
+  display: -ms-grid;
+  display: grid;
+  display: grid;
+  -ms-grid-rows: 50% 50%;
+      grid-template-rows: 50% 50%;
+  -ms-grid-columns: 20% 60% 20%;
+      grid-template-columns: 20% 60% 20%;
+}
+
+div.info div.avi-cont {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  grid-row: 1/3;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+div.info div.avi-cont img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+div.info p.name {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+  font-size: x-small;
+  font-weight: 700;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+div.info p.dob {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2/3;
+  font-size: x-small;
+  font-weight: 500;
+}
+
+div.info figure {
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 1;
+  grid-column: 3/4;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  grid-row: 1/3;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+div.info figure button#share {
+  width: 30px;
+  height: 30px;
+  border: 0px;
+  border-radius: 50%;
+}
+
+div.info figure button#share:focus, div.info figure button#share:active, div.info figure button#share:visited {
+  outline: none;
+}
+
+div.info figure div.social {
+  position: absolute;
+  top: -150%;
+  left: -105%;
+  background: #48556a;
+}
+
+div.info figure div.social.active {
+  display: block;
+  width: 200px;
+  border-bottom-left-radius: 10%;
+  border-bottom-right-radius: 10%;
+}
+
+div.info figure div.social.active.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px;
+}
+
+div.info figure div.social.active.flex span {
+  margin-right: 5%;
+  letter-spacing: 0.2em;
+  font-size: 0.8em;
+  color: #ecf2f8;
+}
+
+div.info figure div.social.active.flex a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 30px;
+  margin: 0 5%;
+}
+
+div.info figure div.social.active.flex a img {
+  width: 100%;
+}
+
+div.info figure div.social::after {
+  position: absolute;
+  content: '';
+  top: 100%;
+  left: 50%;
+  display: block;
+  width: 0;
+  height: 0;
+  border-width: 15px 15px 0 15px;
+  border-color: #48556a transparent transparent transparent;
+  border-style: solid;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+div.social {
+  display: none;
+}
+
+.svgfill {
+  background: #6d7f97;
+}
+
+.svgfill svg path {
+  fill: #9eafc2;
+}
+
+div.attribution {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2/3;
+  grid-column: span 1;
+}
+
+@media all and (max-width: 769px) {
+  section.content {
+    width: 80%;
+    height: 90%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
+    margin-top: auto;
+  }
+  section.content div.drawer {
+    -ms-flex-preferred-size: 45%;
+        flex-basis: 45%;
+    border-radius: 0;
+    border-top-left-radius: 5%;
+    border-top-right-radius: 5%;
+  }
+  section.content div.preview {
+    -ms-flex-preferred-size: 55%;
+        flex-basis: 55%;
+    border-radius: 0;
+    border-bottom-left-radius: 5%;
+    border-bottom-right-radius: 5%;
+    padding: 0;
+  }
+  section.content div.preview p.futoi {
+    padding: 10% 5% 0 5%;
+    font-size: xx-large;
+  }
+  section.content div.preview p.hosoi {
+    padding: 0 5% 5% 5%;
+    font-size: larger;
+  }
+  section.content div.preview div.info {
+    position: relative;
+  }
+  section.content div.preview div.info div img {
+    padding: 0 0 2em 5%;
+    width: 70px;
+    height: 70px;
+  }
+  section.content div.preview p.name {
+    font-size: large;
+  }
+  section.content div.preview p.dob {
+    font-size: medium;
+  }
+  section.content div.preview figure button#share {
+    position: relative;
+    z-index: 2;
+    width: 50px;
+    height: 50px;
+  }
+  section.content div.preview figure div.social {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    bottom: 0;
+    left: -400%;
+    width: 480%;
+  }
+  section.content div.preview figure div.social.active span {
+    margin-left: 10%;
+  }
+  section.content div.preview figure div.social.active.flex a img {
+    height: 100%;
+    margin-top: 100%;
+  }
+  section.content div.preview figure div.social::after {
+    display: none;
+  }
+}
+
+@media all and (max-width: 769px) and (max-width: 376px) {
+  section.content {
+    width: 90vw;
+    height: 70%;
+  }
+  section.content div.preview p {
+    text-align: left;
+  }
+  section.content div.preview p.futoi {
+    font-size: large;
+  }
+  section.content div.preview p.hosoi {
+    font-size: small;
+  }
+  section.content div.preview div.info div img {
+    padding: 0 0 1em 0;
+    width: 50px;
+    height: 50px;
+  }
+  section.content div.preview div.info p.name {
+    font-size: smaller;
+  }
+  section.content div.preview div.info p.dob {
+    font-size: x-small;
+  }
+  section.content div.preview div.info figure button#share {
+    width: 30px;
+    height: 30px;
+  }
+  section.content div.preview div.info figure div.social {
+    width: 470%;
+  }
+  section.content div.preview div.info figure div.social.active span {
+    margin-left: 2%;
+    font-size: xx-small;
+    letter-spacing: 10px;
+  }
+  section.content div.preview div.info figure div.social.active.flex a {
+    width: 20px;
+    height: 20px;
+  }
+}
